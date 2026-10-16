@@ -36,7 +36,7 @@ while True:
     if MIN_HEIGHT <= user_height <= MAX_HEIGHT:
         break
     else:
-        print("Введите еще раз")
+        print("Недопустимое значение. Попробуйте еще раз")
 
 bmi = round((user_weight / (user_height ** 2)), 1)
 if bmi <= 16:
