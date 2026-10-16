@@ -6,7 +6,7 @@ MAX_AGE = 120
 MIN_WEIGHT = 20
 MAX_WEIGHT = 645
 MIN_HEIGHT = 1.1
-MAX_HEIGHT = 272
+MAX_HEIGHT = 2.7
 
 print("Здравствуйте!")
 while True:
@@ -19,24 +19,21 @@ while True:
     user_age = int(user_age)
     if MIN_AGE <= user_age <= MAX_AGE:
         break
-    else:
-        print("Недопустимое значение. Попробуйте еще раз")
+    print(f"Недопустимое значение. Попробуйте еще раз (от {MIN_AGE} до {MAX_AGE})")
 
 while True:
     user_weight = input("Какой у Вас вес в кг? ")
     user_weight = float(user_weight.replace(',', '.'))
     if MIN_WEIGHT <= user_weight <= MAX_WEIGHT:
         break
-    else:
-        print("Недопустимое значение. Попробуйте еще раз")
+    print(f"Недопустимое значение. Попробуйте еще раз (от {MIN_WEIGHT} до {MAX_WEIGHT})")
 
 while True:
     user_height = input("Какой у Вас рост в м?(например 1.74) ")
     user_height = float(user_height.replace(',', '.'))
     if MIN_HEIGHT <= user_height <= MAX_HEIGHT:
         break
-    else:
-        print("Недопустимое значение. Попробуйте еще раз")
+    print(f"Недопустимое значение. Попробуйте еще раз (от {MIN_HEIGHT} до {MAX_HEIGHT})")
 
 bmi = round((user_weight / (user_height ** 2)), 1)
 if bmi <= 16:
